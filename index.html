@@ -61,7 +61,7 @@
         </section><br>
         <!-- cupon -->
 
-    <div class="flex gap-6 px-1 lg:px-52 ">
+    <div class="lg:flex gap-6 px-1 lg:px-52 ">
       <div>
         <!-- sy -->
         <div class="cards flex">
@@ -111,7 +111,7 @@
         <p>Traveled by both bus and air several times. service is nice as expected. got a refund within 20 minutes! <br> think this is the best refund policy in Bangladesh. good luck.</p>
       </div><br>
         <div class="p-6">
-          <div class="flex gap-6">
+          <div class="lg:flex gap-6">
             <!-- ban contant -->
             <div class="w-4/5 card bg-base-100 shadow-xl">
               <!-- --- -->
@@ -124,7 +124,7 @@
                       <td></td> 
                       <td></td> 
                       <td><img src="/images/seat-green.png" alt=""></td> 
-                      <td>40</td> 
+                      <td class="seatCounts" id="seatCount">40</td> 
                       <td>Seats left</td>
                       <th></th> 
                     </tr>
@@ -154,12 +154,13 @@
                     </tr>
                   </tfoot>
                 </table>
+                <div class="flex lg:gap-7 lg:px-6">
+                  <button class="btn btn-wide">Boarding Point - Laxmipur</button>
+                  <button class="btn btn-wide">Dropping Point - Bogura</button>
+                  <button class="btn btn-wide">Est. Time - 11 Hour</button>
+                </div>
               </div>
-              <div class="flex gap-7 px-6">
-                <button class="btn btn-wide">Boarding Point - Laxmipur</button>
-                <button class="btn btn-wide">Dropping Point - Bogura</button>
-                <button class="btn btn-wide">Est. Time - 11 Hour</button>
-              </div>
+             
             </div>
             <!-- dan contant -->
             <div>
@@ -179,7 +180,7 @@
         </div><br>
 
         <!-- --- -->
-        <div class="flex bg-base-100 shadow-xl">
+        <div class="lg:flex bg-base-100 shadow-xl">
           <div class="w-3/5 px-8">
             <h1>Select Your Seat</h1>
             <hr>
@@ -198,25 +199,23 @@
               <div class="grid grid-cols-5 gap-4">
                 <div class="row justify-center items-center">
                   <div class="A flex gap-16"><h1>A</h1>
-                    <div id="A1" class="seat text-center p-2  bg-gray-100">A1</div>
-                    <div id="A2" class="seat text-center p-2  bg-gray-100">A2</div>
-                    <div id="A3" class="seat text-center p-2  bg-gray-100">A3</div>
-                    <div id="A4" class="seat text-center p-2  bg-gray-100">A4</div>
-                    <div id="A5" class="seat text-center p-2  bg-gray-100">A5</div>
+                    <div id="A1 seatName" class="seat text-center p-2  bg-gray-100"><h1 class="name">A1</h1></div>
+                    <div id="A2 seatName" class="seat text-center p-2  bg-gray-100"><h1 class="name">A2</h1></div>
+                    <div id="A3 seatName" class="seat text-center p-2  bg-gray-100"><h1 class="name">A3</h1></div>
+                    <div id="A4 seatName" class="seat text-center p-2  bg-gray-100"><h1 class="name">A4</h1></div>
                   </div>
                 </div>
                
 
               </div><br>
-              <div class="grid grid-cols-5 gap-4">
+              <div class="grid grid-cols-5 gap-3 lg:gap-36">
                 <div class="row justify-center items-center">
                   <div class="flex gap-16">
                     <h1>B</h1>
-                    <div id="B1" class="seat text-center p-2 bg-gray-100">B1</div>
-                    <div id="B2" class="seat text-center p-2 bg-gray-100">B2</div>
-                    <div id="B3" class="seat text-center p-2 bg-gray-100">B3</div>
-                    <div id="B4" class="seat text-center p-2 bg-gray-100">B4</div>
-                    <div id="B5" class="seat text-center p-2 bg-gray-100">B5</div>
+                    <div id="B1" class="seat text-center p-2 bg-gray-100"><h1 class="name">B1</h1></div>
+                    <div id="B2" class="seat text-center p-2 bg-gray-100"><h1 class="name">B2</h1></div>
+                    <div id="B3" class="seat text-center p-2 bg-gray-100"><h1 class="name">B3</h1></div>
+                    <div id="B4" class="seat text-center p-2 bg-gray-100"><h1 class="name">B4</h1></div>
                   </div>
                 </div>
                
@@ -235,7 +234,7 @@
                 <thead>
                   <tr>
                     <th></th>
-                    <th>Seat</th>
+                    <th>Seat <span id="count">0</span></th>
                     <th>Class</th>
                     <th>Price</th>
                   </tr>
@@ -324,7 +323,8 @@
     <footer>
         
     </footer>
-
-    
+   
+    <script src="/js/index.js"></script>
+    <script src="/js/ap.js"></script>
 </body>
 </html>
