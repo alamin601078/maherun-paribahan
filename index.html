@@ -54,7 +54,8 @@
                 <div class="text-center space-y-20 pb-36 font-bold">
                     <h1 class="text-white text-6xl pt-20">End-to-End Travel with <br><br><span class="text-green-500 ">Maherun Paribahan</span> </h1>
                     <p class=" text-white text-lg">Choose your origin, destination, journey dates and search for buses</p>
-                    <button class="btn btn-success text-xl">Buy Tickets</button>
+                    
+                    <a href="https://daisyui.com/components/modal/#"><button class="btn btn-success text-xl">Buy Tickets</button></a>
                    
                 </div>
             </div>
@@ -124,7 +125,7 @@
                       <td></td> 
                       <td></td> 
                       <td><img src="/images/seat-green.png" alt=""></td> 
-                      <td class="seatCounts" id="seatCount">40</td> 
+                      <td class="seatCounts" id="seatCount">8</td> 
                       <td>Seats left</td>
                       <th></th> 
                     </tr>
@@ -233,7 +234,6 @@
                 <!-- head -->
                 <thead>
                   <tr>
-                    <th></th>
                     <th>Seat <span id="count">0</span></th>
                     <th>Class</th>
                     <th>Price</th>
@@ -241,41 +241,29 @@
                 </thead>
                 <tbody>
                   <!-- row 1 -->
-                  <tr>
-                    <th></th>
-                    <td>A1</td>
-                    <td>Economoy</td>
-                    <td>550</td>
-                  </tr>
-                  <!-- row 2 -->
-                  <tr>
-                    <th></th>
-                    <td>A1</td>
-                    <td>Economoy</td>
-                    <td>550</td>
-                  </tr><hr>
+                  <thead id="seatSelectcontainer">
+                    
+                  </thead>
+                  
                   <thead>
                     <tr>
-                      <th></th>
                       <th>Total Price</th>
                       <th></th>
-                      <th><p>BDT <span>550</span></p></th>
+                      <th><p>BDT <span id="total-Price">0</span></p></th>
+                    </tr>
+                  </thead>
+                  <thead>
+                    <tr id="cupon-submit">
+                      <th><input id="cupon-code" type="text" placeholder="Have any copupon?"></th>
+                      <th></th>
+                      <th><button onclick="updateGrandTotalValu('copon')" class="btn btn-success">Apply</button></th>
                     </tr>
                   </thead>
                   <thead>
                     <tr>
-                      <th></th>
-                      <th><input type="text" placeholder="Have any copupon?"></th>
-                      <th></th>
-                      <th><button class="btn btn-success">Apply</button></th>
-                    </tr>
-                  </thead>
-                  <thead>
-                    <tr>
-                      <th></th>
                       <th>Grand Total</th>
                       <th></th>
-                      <th><p>BDT <span>550</span></p></th>
+                      <th><p>BDT <span id="grand-valu">0</span></p></th>
                     </tr>
                   </thead>
                   
@@ -309,7 +297,22 @@
             </div>
             <div><br>
               <label class="form-control w-full max-w-xs">
-                <button class="btn btn-success">Success</button>
+                <!-- The button to open modal -->
+                <label for="my_modal_7" class="btn btn-success"> Next </label>
+
+                
+                <input type="checkbox" id="my_modal_7" class="modal-toggle" />
+                <div class="modal text-center items-center" role="dialog">
+                  <div class="modal-box">
+                    <img class="items-center px-40" src="/images/success.png" alt="">
+                    <h3 class="text-lg font-bold ">SUCCESS</h3>
+                    <p class="py-2">Thank you for Booking Our Bus Seats. <br>
+                      We are working hard to find the best service and deals for you</p>
+                      <p class="py-5">Shortly you will find a confirmation in your email.</p>
+                      <label for="my_modal_7" class="btn btn-success py-4"> Continue </label>
+                  </div>
+                 
+                </div>
                 <div class="label">
                   <a class="label-text-alt">Terms and Conditions</a>
                   <a class="label-text-alt">Cancellation Policy</a>
@@ -325,6 +328,5 @@
     </footer>
    
     <script src="/js/index.js"></script>
-    <script src="/js/ap.js"></script>
 </body>
 </html>
