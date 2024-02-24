@@ -50,11 +50,11 @@ for (const seat of allseat){
 
       const seatselectContainer = document.getElementById("seatSelectcontainer")
 
+      
+      // seat.removeEventListener("click", handleclick)
+      seat.setAttribute("disabled", false);
 
-
-      event.target.setAttribute("disabled", false);
-
-      event.target.setAttribute("remove", false);
+      seat.setAttribute("remove", false);
 
       const seatCondition = getconvatetValu("count");
       if (seatCondition + 1 > 4){
@@ -62,7 +62,7 @@ for (const seat of allseat){
         return;
       }
       seat.classList.add("bg-green-500");
-
+      
 
 
       // update seat
@@ -74,7 +74,7 @@ for (const seat of allseat){
 
 
 
-
+      
 
       const tr =document.createElement("tr")
 
@@ -112,18 +112,21 @@ for (const seat of allseat){
         if (cuponCode == 'NEW20'){
           const discount = totalCost * .15;
           document.getElementById("grand-valu").innerText= totalCost - discount;
+          let cuponRemove = document.getElementById("cupon-submit")
+      cuponRemove.remove();
         } 
         else if (cuponCode == 'copol30') {
           const discount = totalCost * .20;
           document.getElementById("grand-valu").innerText= totalCost - discount;
-          
+          let cuponRemove = document.getElementById("cupon-submit")
+      cuponRemove.remove();
         } else {
           
         }
         console.log('div ase')
       }
       
-   
+      
      
     }
 
