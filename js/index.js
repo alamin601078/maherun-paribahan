@@ -61,7 +61,7 @@ for (const seat of allseat){
         alert("ek shathe forth er beshi hobe na")
         return;
       }
-      event.target.style = "bg-green-500";
+      seat.classList.add("bg-green-500");
 
 
 
@@ -107,14 +107,14 @@ for (const seat of allseat){
       if (statas == undefined){
         
       }else{
-        const cuponCode = document.getElementById("cupon-code").valu;
+        const cuponCode = document.getElementById("cupon-code").value;
         console.log(cuponCode)
         if (cuponCode == 'NEW20'){
-          const discount = totalCost * .2;
+          const discount = totalCost * .15;
           document.getElementById("grand-valu").innerText= totalCost - discount;
         } 
         else if (cuponCode == 'copol30') {
-          const discount = totalCost * .3;
+          const discount = totalCost * .20;
           document.getElementById("grand-valu").innerText= totalCost - discount;
           
         } else {
